@@ -53,8 +53,11 @@ public class board extends JPanel implements ActionListener{
         this. CANVAS_HEIGHT= CELL_SIZE * subgrid_no*3;
 
     }
+    
+    //next up to do, group by regions so first 3 region1, next 3, region2 , next 3, assign reg3 three times
+    //then do region4,5 and 6
   
-    public void initialiseBoard(HashMap<Integer, Integer> problem){
+    public void initialiseBoard(int[][] problem){
          
         int SUBGRID_LENGTH = 3;
         int GRID_LENGTH = subgrid_no * SUBGRID_LENGTH; //board size
@@ -76,7 +79,7 @@ public class board extends JPanel implements ActionListener{
             borderCount = 0;
             for(int j=0; j<GRID_LENGTH ; j++){
                 square sq = new square(formatter, j, 0,x);
-                sq.setText(""+problem.get(x));
+                sq.setText(""+problem[i][j]);
                 x++; 
                 borderCount++;
                 sq.setFont(FONT_GRID);
@@ -107,6 +110,7 @@ public class board extends JPanel implements ActionListener{
         
        
     }
+    
     
     public void addMenu(JFrame frame){
          //adding menu bar
@@ -148,6 +152,7 @@ public class board extends JPanel implements ActionListener{
             System.out.println("2*2");
         }
     }
+    
     
     
 }

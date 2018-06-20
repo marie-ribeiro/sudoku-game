@@ -22,7 +22,7 @@ public class Sudoku2 {
         int size = 3;
         board board = new board(size); //can set grid size here; enter int x, to be x*x grid. default =3
         problem newprob = new problem(size);
-        HashMap<Integer, Integer> problem=newprob.generateProblem();
+        int[][] problem=newprob.generateProblem();
         board.initialiseBoard(problem);
         
     }
