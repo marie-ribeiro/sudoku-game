@@ -1,2 +1,2 @@
 # sudoku-game
-A sudoku game written in java that uses genetic algorithms to generate and solve puzzles.
+A sudoku game written in java that can generate and solve puzzles.
